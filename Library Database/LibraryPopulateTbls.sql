@@ -32,7 +32,9 @@ INSERT INTO tbl_library_branch
 	(library_branchName, library_address)
 	VALUES 
 	('Sharpstown','321 Sherwood Ave, Sherwood, OR 97140'),
-	('Central','258 Main St, Portland, OR 97258')
+	('Central','258 Main St, Portland, OR 97258'),
+	('Portland','456 5th Ave., Portland, OR 97258'),
+	('Camas','3214 Reese Way, Camas, WA 78945')
 ;
 SELECT * FROM tbl_library_branch;
 
@@ -59,7 +61,7 @@ INSERT INTO tbl_book
 	('Huckleberry Finn','Penguin Books'),
 	('Moby Dick','Penguin Books'),
 	('Emma','Penguin Books'),
-	('A Tale of Two Cities','Penguin Books')
+	('A Tale of Two Cities','Penguin Books'),
 	('The Lost Tribe','Reformist Trust')
 ;
 SELECT * FROM tbl_book;
@@ -86,7 +88,7 @@ INSERT INTO tbl_book_authors
 	(5016,'Mark Twain'),
 	(5017,'Herman Melville'),
 	(5018,'Jane Eyre'),
-	(5019,'Charles Dickens')
+	(5019,'Charles Dickens'),
 	(5020,'John Smith')
 ;
 SELECT * FROM tbl_book_authors;
