@@ -9,11 +9,9 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	background-position: bottom right;
-	
-	font-family: 'Lato', Arial, sans-serif;
+	background-position: bottom right;	
+	font-family: 'Lato', Arial, sans-serif !important;
 	color: #231f20;
-	
 	/* for older browsers */
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-text-size-adjust: 100%;
@@ -32,7 +30,7 @@ body {
 }
 
 .wrapper .wrapper {
-		margin: 2% 5%;
+	margin: 2% 5%;
 }
 
 .jumbotron {
@@ -50,8 +48,19 @@ h1 {
 	text-transform: uppercase;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* pizza-size section */
 .pizza-size {
 	margin-bottom: 1em;
+}
+
+.pizza-size .form-check-label {
+	font-weight: 800;
 }
 
 /* restyle cards and the card buttons on top */
@@ -60,6 +69,8 @@ h1 {
 }
 
 .card-header {
+	background: #605954;
+	color: #fff;	
 	padding: .6em;
 }
 
@@ -75,22 +86,14 @@ h1 {
 	box-shadow: none;
 }
 
-/* restyle form items */
-.pizza-size .form-check-label {
-	font-weight: 900;
-}
-
 .card-body .form-check {
 	padding: 1rem 1.5rem;
 }
 
 .card-body .form-check-label {
-	color: 605954;
+	color: #605954;
 	padding-left: 5px;
 }
-
-
-
 
 /* restyle action buttons */
 .btn-primary {
@@ -99,40 +102,44 @@ h1 {
     border-color: #c4122f;
 	border-radius: 0;
 	margin: 1em auto;
+	box-shadow: 0;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
 	background-color: #8B0E04;
 	border-color: #8B0E04;
+	box-shadow: none;
 }
 
-/* restyle accordion card-header */
-.card-header {
-	background: #605954;
-	color: #fff;
-	
+@media (max-width: 700px) {
+	#calcBtn {
+		width: 100%;
+	}
 }
 
-
-
-
-
-
-
-
-// radio button styles - red - DOESNT WORK
-.radio-pink[type="radio"]:checked+label:after {
-    border-color: #c4122f;
-    background-color: #c4122f;
-}
-/*Gap*/
-
-.radio-pink-gap[type="radio"].with-gap:checked+label:before {
-    border-color: #c4122f;
+/* default error message to hidden */
+#orderErrorMsg {
+	display: none;
 }
 
-.radio-pink-gap[type="radio"]:checked+label:after {
-    border-color: #c4122f;
-    background-color: #c4122f;
-}                
- //-----
+/* order total modal */
+.modal-body {
+	margin: 5%;
+}
+
+.itemName, .totalName {
+	width:  75%;
+	float: left;
+	padding: 1%;
+}
+
+.itemPrice, #totalPrice  {
+	width: 22%;
+	float: right;
+	text-align: right;
+	margin: auto 1%;	
+}
+
+.totalName, #totalPrice {
+	font-size:1.5rem;
+}
